@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.CategoryFinalFragment">
+
+    <TextView
+        android:id="@+id/txtfinaldetailsname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:fontFamily="monospace"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/txtfinaldetailsitemname"
+        android:layout_width="205dp"
+        android:layout_height="45dp"
+        android:layout_weight="1"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="#FFF"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtfinaldetailsname"/>
+
+    <TextView
+        android:id="@+id/txtfinaldetailscountry"
+        android:layout_width="205dp"
+        android:layout_height="45dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:background="#2E86DD"
+        android:textStyle="bold"
+        android:textColor="#FFF"
+        app:layout_constraintLeft_toRightOf="@id/txtfinaldetailsitemname"
+        app:layout_constraintTop_toBottomOf="@id/txtfinaldetailsname"/>
+
+    <ImageView
+        android:id="@+id/imgfinaldetailsimage"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/txtfinaldetailsitemname"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/threebutton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toBottomOf="@id/imgfinaldetailsimage"
+        app:layout_constraintLeft_toLeftOf="parent" >
+
+        <Button
+            android:id="@+id/btnFinalIngredient"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Ingredient"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"
+            android:textAllCaps="false"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/btnFinalRecipe"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Recipe"
+            android:textSize="16sp"
+            android:textColor="#2E86DD"
+            android:textAllCaps="false"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/btnFinalYoutube"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Youtube"
+            android:textSize="16sp"
+            android:textColor="#F61919"
+            android:textAllCaps="false"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/instruction"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Instruction"
+        android:textAlignment="center"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/threebutton" />
+
+    <TextView
+        android:id="@+id/txtfinaldetailsinstruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/instruction"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <ProgressBar
+        android:id="@+id/categoryProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

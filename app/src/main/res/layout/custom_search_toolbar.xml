@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#2E86DD"
+    >
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search meal ...."
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:textColorHint="#FFF"
+        android:textColor="#FFF"
+        android:singleLine="true"/>
+
+</androidx.appcompat.widget.Toolbar>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.RandomDetailsFragment">
+
+    <TextView
+        android:id="@+id/txtRandomDetailsName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#1C1616"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/txtRandomDetailsItemName"/>
+
+        <TextView
+            android:id="@+id/txtRandomDetailsItemName"
+            android:layout_width="183.5dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:background="@drawable/randomdetailsitemname"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtRandomDetailsName"/>
+
+        <TextView
+            android:id="@+id/txtRandomDetailsCountry"
+            android:layout_width="183.5dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:background="@drawable/randomdetailscountry"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtRandomDetailsName"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@id/txtRandomDetailsItemName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+    <ImageView
+        android:id="@+id/imgRandomDetailsImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+         />
+
+        <ProgressBar
+            android:id="@+id/randomProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="110dp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+        <Button
+            android:id="@+id/btnRandomDetailsIngredient"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:text="Ingredient"
+            android:gravity="center"
+            android:background="@drawable/ingredientsbutton"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+        <Button
+            android:id="@+id/btnRandomDetailsRecipe"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:text="Recipe"
+            android:background="@drawable/recipebutton"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#2E86DD"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"/>
+        <Button
+            android:id="@+id/btnRandomDetailsYoutube"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:text="Youtube"
+            android:background="@drawable/youtubebutton"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#F61919"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"/>
+
+
+    <TextView
+        android:id="@+id/instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Instruction"
+        android:textColor="#2E86DD"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btnRandomDetailsRecipe" />
+
+    <TextView
+        android:id="@+id/txtRandomDetailsInstruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#1C1616"
+        app:layout_constraintTop_toBottomOf="@id/instruction"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+<!--
+<LinearLayout
+android:id="@+id/threeButton"
+android:layout_width="match_parent"
+android:layout_height="60dp"
+app:layout_constraintTop_toBottomOf="@id/imgRandomDetailsImage"
+android:layout_marginTop="10dp"
+app:layout_constraintLeft_toLeftOf="parent" >
+<Button
+    android:id="@+id/btnRandomDetailsIngredient"
+    android:layout_width="120dp"
+    android:layout_height="match_parent"
+    android:text="Ingredient"
+    android:gravity="center"
+    android:background="@drawable/countrylist"
+    android:layout_marginRight="5dp"
+    android:textSize="16sp"
+    android:textColor="@color/colorAccent"
+    android:textAllCaps="false" />
+<Button
+    android:id="@+id/btnRandomDetailsRecipe"
+    android:layout_width="120dp"
+    android:layout_height="match_parent"
+    android:text="Recipe"
+    android:background="@drawable/countrylist"
+    android:gravity="center"
+    android:textSize="16sp"
+    android:textColor="#2E86DD"
+    android:textAllCaps="false" />
+<Button
+    android:id="@+id/btnRandomDetailsYoutube"
+    android:layout_width="120dp"
+    android:layout_height="match_parent"
+    android:text="Youtube"
+    android:background="@drawable/countrylist"
+    android:gravity="center"
+    android:layout_marginLeft="5dp"
+    android:textSize="16sp"
+    android:textColor="#F61919"
+    android:textAllCaps="false" />
+
+</LinearLayout>-->

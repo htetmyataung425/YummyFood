@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.htetmyat.yummyfood.fragment.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_randomdetailsFragment"
+            app:destination="@id/RandomDetaailsFragment"
+            app:popUpTo="@id/firstFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_categorylistFragment"
+            app:destination="@id/categorylistFragment"
+            app:popUpTo="@id/firstFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_countryFragment"
+            app:destination="@id/countryFragment"
+            app:popUpTo="@id/firstFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_letterFragment"
+            app:destination="@id/letterFragment"
+            app:popUpTo="@id/firstFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_ingredientsFragment"
+            app:destination="@id/ingredientsFragment"
+            app:popUpTo="@id/firstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RandomDetaailsFragment"
+        android:name="com.htetmyat.yummyfood.fragment.RandomDetailsFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_randomdetails" >
+        <argument
+            android:name="randomId"
+            app:argType="string"
+            android:defaultValue="default" />
+    </fragment>
+    <fragment
+        android:id="@+id/categorylistFragment"
+        android:name="com.htetmyat.yummyfood.fragment.CategoryListFragment"
+        android:label="fragment_categorylist"
+        tools:layout="@layout/fragment_categorylist">
+        <argument
+            android:name="category"
+            android:defaultValue="seafood"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_categorylistFragment_to_categoryfinalFragment"
+            app:destination="@id/categoryfinalFragment"
+            app:popUpTo="@id/categorylistFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryfinalFragment"
+        android:name="com.htetmyat.yummyfood.fragment.CategoryFinalFragment"
+        android:label="fragment_categoryfinal"
+        tools:layout="@layout/fragment_categoryfinal">
+        <argument
+            android:name="itemid"
+            android:defaultValue="default"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/countryFragment"
+        android:name="com.htetmyat.yummyfood.fragment.CountryFragment"
+        android:label="fragment_country"
+        tools:layout="@layout/fragment_country">
+        <argument
+            android:name="countryid"
+            android:defaultValue="default"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_countryFragment_to_countryListFragment"
+            app:destination="@id/countryListFragment"
+            app:popUpTo="@id/countryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/letterFragment"
+        android:name="com.htetmyat.yummyfood.fragment.LetterFragment"
+        android:label="fragment_letter"
+        tools:layout="@layout/fragment_letter" >
+        <action
+            android:id="@+id/action_letterFragment_to_letterListFragment"
+            app:destination="@id/letterListFragment"
+            app:popUpTo="@id/letterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/letterListFragment"
+        android:name="com.htetmyat.yummyfood.fragment.LetterListFragment"
+        android:label="fragment_letterlist"
+        tools:layout="@layout/fragment_letterlist" >
+        <argument
+            android:name="letter"
+            app:argType="string"
+            android:defaultValue="default" />
+        <action
+            android:id="@+id/action_letterListFragment_to_letterFinalFragment"
+            app:destination="@id/letterFinalFragment"
+            app:popUpTo="@id/letterListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/countryListFragment"
+        android:name="com.htetmyat.yummyfood.fragment.CountryListFragment"
+        android:label="CountryListFragment"
+        tools:layout="@layout/fragment_countrylist">
+        <argument
+            android:name="countryid"
+            android:defaultValue="defult"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_countryListFragment_to_countryFinalFragment"
+            app:destination="@id/countryFinalFragment"
+            app:popUpTo="@id/countryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/letterFinalFragment"
+        android:name="com.htetmyat.yummyfood.fragment.LetterFinalFragment"
+        android:label="fragment_letterfinal"
+        tools:layout="@layout/fragment_letterfinal" >
+        <argument
+            android:name="chooseId"
+            app:argType="string"
+            android:defaultValue="default" />
+    </fragment>
+    <fragment
+        android:id="@+id/countryFinalFragment"
+        android:name="com.htetmyat.yummyfood.fragment.CountryFinalFragment"
+        android:label="fragment_countryfinal"
+        tools:layout="@layout/fragment_countryfinal" >
+        <argument
+            android:name="countryid"
+            app:argType="string"
+            android:defaultValue="default" />
+    </fragment>
+    <fragment
+        android:id="@+id/ingredientsFragment"
+        android:name="com.htetmyat.yummyfood.fragment.IngredientsFragment"
+        android:label="fragment_ingredients"
+        tools:layout="@layout/fragment_ingredients" >
+        <argument
+            android:name="ingredient"
+            app:argType="string"
+            android:defaultValue="default" />
+        <action
+            android:id="@+id/action_ingredientsFragment_to_ingredientListFragment"
+            app:destination="@id/ingredientListFragment"
+            app:popUpTo="@id/ingredientsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ingredientListFragment"
+        android:name="com.htetmyat.yummyfood.fragment.IngredientListFragment"
+        android:label="fragment_ingredientslist"
+        tools:layout="@layout/fragment_ingredientslist" >
+        <argument android:name="ingredientslistId"
+            app:argType="string"
+            android:defaultValue="default" />
+        <action
+            android:id="@+id/action_ingredientListFragment_to_ingredientsFinalFragment"
+            app:destination="@id/ingredientsFinalFragment"
+            app:popUpTo="@id/ingredientListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ingredientsFinalFragment"
+        android:name="com.htetmyat.yummyfood.fragment.IngredientsFinalFragment"
+        android:label="fragment_ingredientsfinal"
+        tools:layout="@layout/fragment_ingredientsfinal" >
+        <argument
+            android:name="ingredientsfinalid"
+            app:argType="string"
+            android:defaultValue="default" />
+    </fragment>
+</navigation>
